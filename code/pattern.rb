@@ -1,4 +1,5 @@
 class Pattern
+
   def initialize(height)
     @height = height
   end
