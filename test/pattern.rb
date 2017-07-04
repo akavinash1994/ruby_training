@@ -2,7 +2,6 @@ require_relative '../code/pattern'
 require 'test/unit'
 
 class TestPattern < Test::Unit::TestCase
-
   def test_simple
     expected = "*\n"\
                "**\n"\
