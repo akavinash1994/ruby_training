@@ -1,0 +1,11 @@
+machine:
+  ruby:
+    version: 2.3.1
+dependencies:
+  post:
+    - gem install 'test-unit'
+    - gem install 'rubocop'
+test:
+  post:
+    - ruby test/all.rb
+    - rubocop
