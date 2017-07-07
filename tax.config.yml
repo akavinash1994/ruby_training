@@ -1,0 +1,20 @@
+basic_sales_tax: 0.1
+import_duty: 0.05
+exempt_item:
+  - food:
+    - chocolate
+    - rice
+    - juice
+    - fruit
+    - vegetable
+    - coffee
+    - box
+  - medical:
+    - pills
+    - syrup
+    - injections
+    - xray
+  - books:
+    - book
+    - maths
+    - science
