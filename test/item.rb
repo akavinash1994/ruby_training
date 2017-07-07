@@ -1,8 +1,24 @@
+require 'yaml'
+require_relative '../code/order'
 require_relative '../code/item'
 require 'test/unit'
 class TestItem < Test::Unit::TestCase
-	def test_simple
-		expected = 61.5
-		assert_equal(expected, Item.new('food', 'rice', 3, 20.5, 'no').costaftertax)
-	end
+  def config
+    YAML::load(File.open('../order.config.yml'))
+  end
+  def readyaml
+    input = []
+    config['order'].each do |line|
+      input << line.split(' ')
+    end
+    input
+  end
+  def test_simple
+    item_expected_total_price = 32.19
+    order_expected_total_price = 74.64
+    order_expected_total_tax = 6.66
+    assert_equal(item_expected_total_price, Order.new(readyaml).items[0].total_price)
+    assert_equal(order_expected_total_tax, Order.new(readyaml).total_tax)
+    assert_equal(order_expected_total_price, Order.new(readyaml).total_price)
+  end
 end
