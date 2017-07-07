@@ -1,5 +1,4 @@
 require_relative 'item'
-require 'pry'
 class Order
   attr_accessor :items
   def initialize(item_list)
