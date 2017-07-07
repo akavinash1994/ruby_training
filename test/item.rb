@@ -9,7 +9,7 @@ class TestItem < Test::Unit::TestCase
 
   def test_simple
     (1..3).each do |key|
-      input = config['sale_tax']['inputs'][key].map{ |i| i.split(' ')}
+      input = config['sale_tax']['inputs'][key].map { |i| i.split(' ') }
       expected = config['sale_tax']['outputs'][key]
       assert_equal(expected, Order.new(input).bill)
     end
