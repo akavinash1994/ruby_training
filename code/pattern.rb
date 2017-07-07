@@ -6,7 +6,7 @@ class Pattern
   def generate_pattern
     str = ''
     (1..@height).each do |row|
-      str += ('*' * row) + '\n'
+      str += ('*' * row) + "\n"
     end
     str.strip
   end
