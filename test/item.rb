@@ -1,12 +1,10 @@
-
 require 'yaml'
 require_relative '../code/order'
 require_relative '../code/item'
 require 'test/unit'
 class TestItem < Test::Unit::TestCase
   def config
-    puts "#{Dir.pwd} =====" 
-#    YAML.safe_load(File.open('../order.config.yml'))
+    YAML.safe_load(File.open('./order.config.yml'))
   end
 
   def readyaml

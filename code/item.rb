@@ -12,7 +12,7 @@ class Item
     @quantity = detail[0].to_f
     @name = detail[1..detail.length - 3]
   end
-  
+
   def display_name
     name.gsub('imported', ' ')
   end

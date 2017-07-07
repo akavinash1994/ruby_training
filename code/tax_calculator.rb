@@ -1,7 +1,7 @@
 require 'yaml'
 module TaxCalculator
   def config
-    YAML.safe_load(File.open('../tax.config.yml'))
+    YAML.safe_load(File.open('./tax.config.yml'))
   end
 
   def basic_sale_tax
