@@ -1,5 +1,4 @@
 require_relative 'tax_calculator'
-require 'pry'
 class Item
   include TaxCalculator
   attr_accessor :name, :cost, :quantity, :detail
@@ -13,6 +12,7 @@ class Item
     @quantity = detail[0].to_f
     @name = detail[1..detail.length - 3]
   end
+  
   def display_name
     name.gsub('imported', ' ')
   end

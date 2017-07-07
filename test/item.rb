@@ -4,8 +4,9 @@ require_relative '../code/item'
 require 'test/unit'
 class TestItem < Test::Unit::TestCase
   def config
-    YAML::load(File.open('../order.config.yml'))
+    YAML.safe_load(File.open('../order.config.yml'))
   end
+
   def readyaml
     input = []
     config['order'].each do |line|
@@ -13,6 +14,7 @@ class TestItem < Test::Unit::TestCase
     end
     input
   end
+  
   def test_simple
     item_expected_total_price = 32.19
     order_expected_total_price = 74.64

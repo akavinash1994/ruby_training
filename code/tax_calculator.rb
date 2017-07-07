@@ -1,7 +1,7 @@
 require 'yaml'
 module TaxCalculator
   def config
-    YAML::load(File.open('../tax.config.yml'))
+    YAML.safe_load(File.open('../tax.config.yml'))
   end
 
   def basic_sale_tax
@@ -23,13 +23,11 @@ module TaxCalculator
   end
 
   def tax
-    return 0 if (exempt?) && (!imported?)
+    return 0 if exempt? && !imported?
     duty = cost * quantity
     duty_tax = 0
     duty_tax =  import_duty if imported?
     duty_tax += basic_sale_tax unless exempt?
-    return duty * duty_tax 
+    return duty * duty_tax
   end
 end
-
-
