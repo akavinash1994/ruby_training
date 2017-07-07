@@ -20,7 +20,6 @@ class Order
     output = []
     items.each do |item|
       output << item.quantity.to_i.to_s +
-               (item.imported? ? ' imported ' : ' ') +
                 item.display_name + ' : ' + item.total_price.to_s
     end
     output << 'Sales Taxes : ' + total_tax.to_s

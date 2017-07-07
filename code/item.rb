@@ -14,7 +14,7 @@ class Item
   end
 
   def display_name
-    name.gsub('imported ', '')
+    (imported? ? ' imported ' : ' ') + name.gsub('imported ', '')
   end
 
   def imported?
