@@ -1,0 +1,55 @@
+input[type=email], input[type=password],input[type=date]{
+	width:100%;
+	border: 1px solid #ccc;
+	padding:12px 20px;
+	margin: 8px 0; 
+	display: inline-block;
+	box-sizing: border-box;	
+}
+input{
+	margin-bottom:20px;
+}
+
+form {
+	border:1px solid #ccc;	
+}
+div.form{
+	padding:25px;
+	margin:10px 0;
+	
+}
+div.select{
+	#border: 1px solid #ccc;
+	padding:8px 0px;
+}
+.dropdown{
+	padding:12px 10px;
+	display:  inline-block;
+	margin:0px 0px 0px 5px;
+	width:10%;
+}
+#address{
+	padding:0px 0px 0px 0px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+.cancelbtn,.signupbtn {
+    float: left;
+    width: 50%;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
